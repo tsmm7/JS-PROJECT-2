@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Галерея исскуств</h1>
+      </header>
+
+      <section class="input-section">
+        <input type="text" id="titleInput" placeholder="Название произведения"/>
+        <input type="text" id="descInput" placeholder="Опсание произведение" />
+        <input type="text" id="imageUrlInput" placeholder="Ссылка на изображение" />
+        <div class="buttons">
+          <button id="addArtwork">Добавить</button>
+          <button id="clearAll">Очистить все</button>
+        </div>
+      </section>
+
+      <main class="gallery" id="gallery"></main>
+
+      <template id="artCardTemplate">
+        <div class="art-card">
+          <div class="photo"></div>
+          <div class="info">
+            <p class="title"></p>
+            <p class="description"></p>
+            <button class="like-btn">❤️</button>
+            <button class="edit-btn">✏️</button>
+            <button class="delete-btn">🗑️</button>
+          </div>
+        </div>
+      </template>
+
+      <footer>
+        <p>©2025 dont copyright</p>
+      </footer>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">❌</span>
+            <h2>Редактор карточки</h2>
+            <input type="text" id="editTitle" placeholder="Название">
+            <input type="text" id="editDescription" placeholder="Описание">
+            <input type="text" id="editImageUrl" placeholder="Ссылка на изображение">
+            <button id="saveEdit">Сохранить</button>
+        </div>
+    </div>
+  </body>
+</html>
